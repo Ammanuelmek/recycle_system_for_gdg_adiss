@@ -20,13 +20,15 @@ class _BlogDetailScreenState extends State<BlogDetailScreen> {
               title: Text(
                 'Title For The Blog',
                 style: TextStyle(
-                  color: Colors.red,
+                  color: Colors.teal,
                 ),
               ),
+              backgroundColor: Colors.white,
               elevation: 6.0,
               expandedHeight: 250,
               floating: true,
               snap: true,
+              pinned: true,
               leading: BackButton(
                 color: Colors.black,
               ),

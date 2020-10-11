@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:recycle_app/Screens/AboutScreen.dart';
 import 'package:recycle_app/Screens/BlogDetailScreen.dart';
 import 'package:recycle_app/Screens/EventsScreen.dart';
 import 'package:recycle_app/Screens/HomeScreen.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
         BlogDetailScreen.id: (context) => BlogDetailScreen(),
         ProfileScreen.id: (context) => ProfileScreen(),
         EventsScreen.id: (context) => EventsScreen(),
+        AboutScreen.id: (context) => AboutScreen(),
       },
       initialRoute: WalkThrough.id,
     );

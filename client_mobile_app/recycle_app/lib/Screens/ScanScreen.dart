@@ -1,6 +1,9 @@
 import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
+import 'package:audioplayers/audio_cache.dart';
+
+
 
 class ScanScreen extends StatefulWidget {
   static String id = 'ScanScreen';
@@ -14,12 +17,14 @@ class _ScanScreenState extends State<ScanScreen> {
   String _code = "0";
   String _value = "";
 
+
+
   @override
   void initState() {
     super.initState();
     _confettiController = ConfettiController(
       duration: Duration(
-        seconds: 5,
+        seconds: 2,
       ),
     );
   }
@@ -93,8 +98,12 @@ class _ScanScreenState extends State<ScanScreen> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(18.0),
                       ),
-                      onPressed: () {
+                      onPressed: () async {
                         _confettiController.play();
+
+                        AudioCache audioPlayer = AudioCache(prefix: 'assets/audio/',);
+                        await audioPlayer.play('cheering.wav',);
+
                       },
                       child: Text(
                         'አስገባ',

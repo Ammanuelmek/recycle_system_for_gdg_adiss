@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
+import 'package:recycle_app/Screens/AboutScreen.dart';
 import 'package:recycle_app/Screens/EventsScreen.dart';
 import 'package:recycle_app/Screens/ProfileScreen.dart';
 
@@ -94,6 +95,23 @@ class LandingDrawer extends StatelessWidget {
                 Navigator.pushNamed(context, EventsScreen.id);
               },
             ),
+            ListTile(
+              leading: Icon(
+                FontAwesome.gear,
+                color: Color(0xFF6a5B95),
+              ),
+              title: Text(
+                'Settings - To be Translated',
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Color(0xFF6a5B95),
+                ),
+              ),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, EventsScreen.id);
+              },
+            ),
             Expanded(
               child: SizedBox(
                 height: 10.0,
@@ -105,6 +123,10 @@ class LandingDrawer extends StatelessWidget {
               indent: 12.0,
             ),
             ListTile(
+              onTap: (){
+                Navigator.pop(context);
+                Navigator.pushNamed(context, AboutScreen.id);
+              },
               leading: Icon(
                 FontAwesome.question,
                 color: Color(0xFF6a5B95),
